@@ -50,11 +50,7 @@ function buildHashString(type: "web" | "proxy", querystring: { [index: string]: 
  * @param convertToBase64 Whether the resulting hash should be converted to base64 or left as hex. Should be true for validating webhook requests.
  */
 function getHmacHash(secretKey: string, hashString: string, convertToBase64 = false) {
-    /*
-    Casing to any since line 57 throws a type asignment error 
-    `TS2322: Type 'string' is not assignable to type 'WordArray'.` if hash is allowed to be a wordArray
-    */
-    let hash: any = crypto.HmacSHA256(hashString, secretKey)
+    let hash = crypto.HmacSHA256(hashString, secretKey); 
 
     if (convertToBase64) {
         hash = crypto.enc.Base64.stringify(hash);
