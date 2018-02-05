@@ -70,7 +70,7 @@ export class Fulfillments extends BaseService {
      * @param id The fulfillment's id.
      * @param options Options for canceling the fulfillment.
      */
-    public cancel(id: number, options?: Options.FulfillmentCancelOptions) {
+    public cancel(id: number) {
         return this.createRequest<Fulfillment>("POST", `${id}/cancel.json`, 'fulfillment');
     }
 
@@ -79,7 +79,7 @@ export class Fulfillments extends BaseService {
      * @param id The fulfillment's id.
      * @param options Options for canceling the fulfillment.
      */
-    public complete(id: number, options?: Options.FulfillmentCancelOptions) {
+    public complete(id: number) {
         return this.createRequest<Fulfillment>("POST", `${id}/complete.json`, 'fulfillment');
     }
 }
