@@ -10,6 +10,7 @@ export * from "./orders";
 export * from "./price_rule_discounts";
 export * from "./price_rules";
 export * from "./products";
+export * from "./product_variants";
 export * from "./recurring_charges";
 export * from "./redirects";
 export * from "./script_tags";
