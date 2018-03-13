@@ -17,3 +17,4 @@ export * from "./shops";
 export * from "./smart_collections";
 export * from "./usage_charges";
 export * from "./webhooks";
+export * from "./product_variants";
