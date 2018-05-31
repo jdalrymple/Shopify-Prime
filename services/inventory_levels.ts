@@ -23,7 +23,7 @@ export class InventoryLevels extends BaseService {
      * @param options Options for adjusting an inventory level.
      */
     public adjust(options: { location_id: number, inventory_item_id: number, available_adjustment: number } ) {
-        return this.createRequest<void>("POST", `adjust.json`, "inventory_levels", options);
+        return this.createRequest<void>("POST", `adjust.json`, "inventory_level", options);
     }
 
     /**
@@ -32,7 +32,7 @@ export class InventoryLevels extends BaseService {
      * @param locationId Id of the location being retrieved.
      */
     public delete(inventoryItemId: number, locationId: number) {
-        return this.createRequest<void>("DELETE", `.json?inventory_item_id=${inventoryItemId}&location_id=${locationId}`, "inventory_levels");
+        return this.createRequest<void>("DELETE", `.json?inventory_item_id=${inventoryItemId}&location_id=${locationId}`, "inventory_level");
     }
 
     /**
@@ -40,7 +40,7 @@ export class InventoryLevels extends BaseService {
      * @param options Options for connecting an inventory level.
      */
     public connect(options: { location_id: number, inventory_item_id: number, relocate_if_necessary?: boolean } ) {
-        return this.createRequest<void>("POST", `connect.json`, "inventory_levels", options);
+        return this.createRequest<void>("POST", `connect.json`, "inventory_level", options);
     }
 
     /**
@@ -48,7 +48,7 @@ export class InventoryLevels extends BaseService {
      * @param options Options for adjusting an inventory level.
      */
     public set(options: { location_id: number, inventory_item_id: number, available: number, disconnect_if_necessary?: boolean } ) {
-        return this.createRequest<void>("POST", `set.json`, "inventory_levels", options);
+        return this.createRequest<void>("POST", `set.json`, "inventory_level", options);
     }
 }
 
