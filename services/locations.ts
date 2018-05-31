@@ -7,7 +7,7 @@ import { BaseService } from '../infrastructure';
  */
 export class Locations extends BaseService {
     constructor(shopDomain: string, accessToken: string) {
-        super(shopDomain, accessToken, "");
+        super(shopDomain, accessToken, "locations");
     }
 
     /**
@@ -16,7 +16,7 @@ export class Locations extends BaseService {
      * @param options Options for filtering the result.
      */
     public get(id: number, options?: Options.FieldOptions) {
-        return this.createRequest<Location>("GET", `locations/${id}.json`, "location", options);
+        return this.createRequest<Location>("GET", `${id}.json`, "location", options);
     }
 
     /**
@@ -24,21 +24,21 @@ export class Locations extends BaseService {
      * @param options Options for filtering the results.
      */
     public list(options?: Options.FieldOptions) {
-        return this.createRequest<Location>("GET", `locations.json`, "locations", options);
+        return this.createRequest<Location[]>("GET", `.json`, "locations", options);
     }
 
     /**
      * Counts the amount of locations.
      */
     public count() {
-        return this.createRequest<number>("GET", `locations/count.json`, "count");
+        return this.createRequest<number>("GET", `count.json`, "count");
     }
 
     /**
      * Lists all the inventory levels on a location.
      */
     public inventoryLevels(locationId: number) {
-        return this.createRequest<Location>("GET", `locations/${locationId}/inventory_levels.json`, "inventory_levels");
+        return this.createRequest<Location>("GET", `${locationId}/inventory_levels.json`, "inventory_levels");
     }
 }
 

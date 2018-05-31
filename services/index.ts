@@ -7,6 +7,7 @@ export * from "./discounts";
 export * from "./fulfillments";
 export * from "./gift_cards";
 export * from "./inventory_levels";
+export * from "./locations";
 export * from "./orders";
 export * from "./price_rule_discounts";
 export * from "./price_rules";
