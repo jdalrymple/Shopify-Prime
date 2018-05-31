@@ -3,7 +3,7 @@ import { Location } from '../models';
 import { BaseService } from '../infrastructure';
 
 /**
- * A service for manipulating a blog's product variants.
+ * A service for manipulating a shops Locations API.
  */
 export class Locations extends BaseService {
     constructor(shopDomain: string, accessToken: string) {

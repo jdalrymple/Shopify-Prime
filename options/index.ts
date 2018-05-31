@@ -3,7 +3,8 @@ export * from "./base";
 export * from "./blogs";
 export * from "./fulfillments";
 export * from "./gift_cards";
-export * from "./inventory_levels",
+export * from "./inventory_items";
+export * from "./inventory_levels";
 export * from "./orders";
 export * from "./price_rules";
 export * from "./product_collection";

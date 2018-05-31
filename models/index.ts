@@ -11,6 +11,7 @@ export * from "./discount";
 export * from "./discount_code";
 export * from "./fulfillment";
 export * from "./gift_card";
+export * from "./inventory_item";
 export * from "./inventory_level";
 export * from "./line_item";
 export * from "./line_item_property";
