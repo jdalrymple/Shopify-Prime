@@ -6,6 +6,7 @@ export * from "./custom_collections";
 export * from "./discounts";
 export * from "./fulfillments";
 export * from "./gift_cards";
+export * from "./inventory_items";
 export * from "./inventory_levels";
 export * from "./locations";
 export * from "./orders";

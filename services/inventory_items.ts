@@ -20,11 +20,11 @@ export class InventoryItems extends BaseService {
     }
 
     /**
-     * Gets a list of up to 250 of the shop's inventory levels.
+     * Gets a list of up to 250 of the shop's inventory items.
      * @param options Options for filtering the result.
      */
     public list(options: Options.InventoryItemListOptions) {
-        return this.createRequest<InventoryItem[]>("GET", ".json", "inventory_levels", options);
+        return this.createRequest<InventoryItem[]>("GET", ".json", "inventory_items", options);
     }
 
     /**
