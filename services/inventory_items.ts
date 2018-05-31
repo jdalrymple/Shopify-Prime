@@ -33,7 +33,7 @@ export class InventoryItems extends BaseService {
      * @param inventoryItem The updated inventory item.
      */
     public update(id: number, inventoryItem: InventoryItem) {
-        return this.createRequest<InventoryItem>("PUT", `${id}.json`, "inventory_item", { inventoryItem });
+        return this.createRequest<InventoryItem>("PUT", `${id}.json`, "inventory_item", { inventory_item: inventoryItem });
     }
 }
 
